@@ -1,0 +1,15 @@
+*.nupkg
+*.suo
+*.sln.docstates
+*.user
+*.vsp
+pack.bat
+Thumbs.db
+[Bb]in
+[Dd]ebug*/
+obj/
+packages/*
+!packages/repositories.config
+[Rr]elease*/
+_ReSharper*/
+Pathoschild.FluentJira.Console/
