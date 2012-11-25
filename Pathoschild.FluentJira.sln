@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathoschild.FluentJira.Models", "Pathoschild.FluentJira\Pathoschild.FluentJira.Models.csproj", "{D1961803-E909-4BE8-8987-A7A1B7AAAB4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathoschild.FluentJira.Models", "Pathoschild.FluentJira.Models\Pathoschild.FluentJira.Models.csproj", "{D1961803-E909-4BE8-8987-A7A1B7AAAB4B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scaffolding", "Scaffolding", "{11E7334A-ABC5-4E34-871C-EFA75AEBEAA3}"
 	ProjectSection(SolutionItems) = preProject
