@@ -1,9 +1,9 @@
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>Metadata about users notified when the issue is updated.</summary>
-	public class IssueWatches : Entity
+	public class IssueWatches : AddressableEntity
 	{
 		/// <summary>The number of users watching the issue.</summary>
 		public int WatchCount { get; set; }

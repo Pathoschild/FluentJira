@@ -1,9 +1,9 @@
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>Represents a relation between two issues.</summary>
-	public class IssueLink : EntityWithID
+	public class IssueLink : AddressableIdentifiableEntity
 	{
 		/// <summary>The type of relation.</summary>
 		public IssueLinkType Type { get; set; }

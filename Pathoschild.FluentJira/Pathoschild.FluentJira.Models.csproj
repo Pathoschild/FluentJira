@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1961803-E909-4BE8-8987-A7A1B7AAAB4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pathoschild.FluentJira.Models</RootNamespace>
+    <AssemblyName>Pathoschild.FluentJira.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Internal\AddressableEntity.cs" />
+    <Compile Include="Abstract\EntityList.cs" />
+    <Compile Include="Internal\AddressableIdentifiableNamedEntity.cs" />
+    <Compile Include="Internal\AddressableIdentifiableEntity.cs" />
+    <Compile Include="Abstract\IAddressableEntity.cs" />
+    <Compile Include="Abstract\IIdentifiableEntity.cs" />
+    <Compile Include="Abstract\INamedEntity.cs" />
+    <Compile Include="Attachment.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="CommentList.cs" />
+    <Compile Include="Component.cs" />
+    <Compile Include="FixVersion.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="GroupList.cs" />
+    <Compile Include="Issue.cs" />
+    <Compile Include="IssueFields.cs" />
+    <Compile Include="IssueLink.cs" />
+    <Compile Include="IssueLinkType.cs" />
+    <Compile Include="IssueList.cs" />
+    <Compile Include="IssueTimeTracking.cs" />
+    <Compile Include="IssueType.cs" />
+    <Compile Include="IssueVotes.cs" />
+    <Compile Include="IssueVotesEntity.cs" />
+    <Compile Include="IssueWatches.cs" />
+    <Compile Include="IssueWatchesEntity.cs" />
+    <Compile Include="Priority.cs" />
+    <Compile Include="PriorityEntity.cs" />
+    <Compile Include="ProgressValue.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Resolution.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="WorkLog.cs" />
+    <Compile Include="WorklogList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="..\packages\PostSharp.2.1.7.22\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.2.1.7.22\tools\PostSharp.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

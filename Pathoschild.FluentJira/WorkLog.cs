@@ -1,10 +1,10 @@
 ﻿using System;
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>A worklog entry that indicates work done.</summary>
-	public class WorkLog : EntityWithID
+	public class WorkLog : AddressableIdentifiableEntity
 	{
 		/// <summary>The user who created the entry.</summary>
 		public User Author { get; set; }

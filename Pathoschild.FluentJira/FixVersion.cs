@@ -1,10 +1,10 @@
 using System;
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>Represents a product version for which issues can be planned.</summary>
-	public class FixVersion : EntityWithDisplay
+	public class FixVersion : AddressableIdentifiableNamedEntity
 	{
 		/// <summary>The date on which the release is scheduled for completion.</summary>
 		public DateTime? ReleaseDate { get; set; }

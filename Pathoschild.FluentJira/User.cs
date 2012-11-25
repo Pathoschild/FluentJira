@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>Represents a person in JIRA.</summary>
-	public class User : Entity
+	public class User : AddressableEntity
 	{
 		/// <summary>The unique identifying key.</summary>
 		public string Name { get; set; }

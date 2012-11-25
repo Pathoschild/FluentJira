@@ -1,10 +1,10 @@
 using System;
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>Represents a file attached to an issue.</summary>
-	public class Attachment : EntityWithID
+	public class Attachment : AddressableIdentifiableEntity
 	{
 		/// <summary>The name of the file.</summary>
 		public string Filename { get; set; }

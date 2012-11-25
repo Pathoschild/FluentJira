@@ -1,7 +1,9 @@
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>Represents an issue resolution such as "Fixed" or "Duplicate".</summary>
-	public class Resolution : EntityWithDisplay { }
+	public class Resolution : AddressableIdentifiableNamedEntity
+	{
+	}
 }

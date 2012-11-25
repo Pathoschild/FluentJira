@@ -1,9 +1,9 @@
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>The relative priority of an issue.</summary>
-	public class Priority : EntityWithID
+	public class Priority : AddressableIdentifiableEntity
 	{
 		/// <summary>The display name of the priority.</summary>
 		public string Name { get; set; }

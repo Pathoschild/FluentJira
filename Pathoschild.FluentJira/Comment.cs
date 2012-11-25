@@ -1,10 +1,10 @@
 using System;
-using Pathoschild.FluentJira.Models.Abstract;
+using Pathoschild.FluentJira.Models.Internal;
 
 namespace Pathoschild.FluentJira.Models
 {
 	/// <summary>Represents a user's comment on an issue.</summary>
-	public class Comment : EntityWithID
+	public class Comment : AddressableIdentifiableEntity
 	{
 		/// <summary>The user who created the comment.</summary>
 		public User Author { get; set; }

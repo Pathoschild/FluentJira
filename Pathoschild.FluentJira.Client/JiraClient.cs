@@ -2,14 +2,14 @@
 using System.Net.Http.Headers;
 using System.Text;
 using Pathoschild.DesignByContract;
-using Pathoschild.FluentJira.Models;
-using Pathoschild.Http.FluentClient;
+using Pathoschild.Http.Client.Default;
 using Pathoschild.Http.Formatters.JsonNet;
 
-namespace Pathoschild.FluentJira
+namespace Pathoschild.FluentJira.Client
 {
 	/// <summary>Sends HTTP requests and receives responses from a JIRA REST API.</summary>
-	public class JiraClient : Pathoschild.Http.FluentClient.Default.Client
+	[DesignedByContract]
+	public class JiraClient : FluentClient
 	{
 		/*********
 		** Public methods

@@ -1,24 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="Pathoschild.FluentJira" Label="Pathoschild.FluentJira" Category="Project" />
-    <Node Id="Newtonsoft.Json 4.5.7" Label="Newtonsoft.Json 4.5.7" Category="Package" />
-    <Node Id="Pathoschild.DesignByContract 0.1.4-alpha" Label="Pathoschild.DesignByContract 0.1.4-alpha" Category="Package" />
-    <Node Id="Pathoschild.DesignByContract.Annotations 0.1.4-alpha" Label="Pathoschild.DesignByContract.Annotations 0.1.4-alpha" Category="Package" />
-    <Node Id="Pathoschild.Http.FluentClient 0.2.0-alpha" Label="Pathoschild.Http.FluentClient 0.2.0-alpha" Category="Package" />
-    <Node Id="Pathoschild.Http.Formatters.Core 0.2.0-alpha" Label="Pathoschild.Http.Formatters.Core 0.2.0-alpha" Category="Package" />
-    <Node Id="Pathoschild.Http.Formatters.JsonNet 0.2.1-alpha" Label="Pathoschild.Http.Formatters.JsonNet 0.2.1-alpha" Category="Package" />
-    <Node Id="PostSharp 2.1.6.17" Label="PostSharp 2.1.6.17" Category="Package" />
+    <Node Id="Pathoschild.FluentJira.Client" Label="Pathoschild.FluentJira.Client" Category="Project" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Label="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Package" />
+    <Node Id="Microsoft.Net.Http 2.0.20710.0" Label="Microsoft.Net.Http 2.0.20710.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="Package" />
+    <Node Id="Pathoschild.DesignByContract 0.1.6-alpha2" Label="Pathoschild.DesignByContract 0.1.6-alpha2" Category="Package" />
+    <Node Id="Pathoschild.Http.FluentClient 0.5.0-beta" Label="Pathoschild.Http.FluentClient 0.5.0-beta" Category="Package" />
+    <Node Id="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Label="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Category="Package" />
+    <Node Id="PostSharp 2.1.7.22" Label="PostSharp 2.1.7.22" Category="Package" />
   </Nodes>
   <Links>
-    <Link Source="Pathoschild.DesignByContract 0.1.4-alpha" Target="Pathoschild.DesignByContract.Annotations 0.1.4-alpha" Category="Package Dependency" />
-    <Link Source="Pathoschild.DesignByContract 0.1.4-alpha" Target="PostSharp 2.1.6.17" Category="Package Dependency" />
-    <Link Source="Pathoschild.DesignByContract 0.1.4-alpha" Target="Newtonsoft.Json 4.5.7" Category="Package Dependency" />
-    <Link Source="Pathoschild.Http.Formatters.JsonNet 0.2.1-alpha" Target="Pathoschild.Http.Formatters.Core 0.2.0-alpha" Category="Package Dependency" />
-    <Link Source="Pathoschild.Http.Formatters.JsonNet 0.2.1-alpha" Target="Newtonsoft.Json 4.5.7" Category="Package Dependency" />
-    <Link Source="Pathoschild.FluentJira" Target="Pathoschild.DesignByContract 0.1.4-alpha" Category="Installed Package" />
-    <Link Source="Pathoschild.FluentJira" Target="Pathoschild.Http.FluentClient 0.2.0-alpha" Category="Installed Package" />
-    <Link Source="Pathoschild.FluentJira" Target="Pathoschild.Http.Formatters.JsonNet 0.2.1-alpha" Category="Installed Package" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
+    <Link Source="Pathoschild.DesignByContract 0.1.6-alpha2" Target="PostSharp 2.1.7.22" Category="Package Dependency" />
+    <Link Source="Pathoschild.DesignByContract 0.1.6-alpha2" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
+    <Link Source="Pathoschild.Http.FluentClient 0.5.0-beta" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
+    <Link Source="Pathoschild.Http.FluentClient 0.5.0-beta" Target="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Package Dependency" />
+    <Link Source="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
+    <Link Source="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Target="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Package Dependency" />
+    <Link Source="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
+    <Link Source="Pathoschild.FluentJira.Client" Target="Pathoschild.DesignByContract 0.1.6-alpha2" Category="Installed Package" />
+    <Link Source="Pathoschild.FluentJira.Client" Target="Pathoschild.Http.FluentClient 0.5.0-beta" Category="Installed Package" />
+    <Link Source="Pathoschild.FluentJira.Client" Target="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Category="Installed Package" />
   </Links>
   <Categories>
     <Category Id="Project" />
