@@ -4,7 +4,7 @@ using System.Text;
 using Pathoschild.Http.Client.Default;
 using Pathoschild.Http.Formatters.JsonNet;
 
-namespace Pathoschild.FluentJira.Client
+namespace Pathoschild.FluentJira
 {
 	/// <summary>Sends HTTP requests and receives responses from a JIRA REST API.</summary>
 	public class JiraClient : FluentClient
