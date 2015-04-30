@@ -1,4 +1,4 @@
-**Pathoschild.FluentJira** is a tiny framework for using [JIRA](http://www.atlassian.com/software/jira/overview)'s
+**FluentJira** is a tiny framework for using [JIRA](http://www.atlassian.com/software/jira/overview)'s
 [REST API](http://docs.atlassian.com/jira/REST/latest/) from C#. It handles authentication and maps
 REST responses to strongly-typed models, but you're still responsible for building the API call.
 This is by design — you're not constrained to the operations abstracted by the client, and you can
@@ -7,7 +7,7 @@ query custom addon APIs that aren't added to the client library (by passing in c
 **This is an early development version.**
 
 ## Usage
-This client is an extension of [`Pathoschild.FluentHttpClient`](https://github.com/Pathoschild/Pathoschild.FluentHttpClient),
+This client is an extension of [`FluentHttpClient`](https://github.com/Pathoschild/Pathoschild.FluentHttpClient),
 so you can execute any HTTP request against the API and get a strongly-typed response. The
 structures returned by the client look like the actual API responses, so the [JIRA API documentation](http://docs.atlassian.com/jira/REST/latest/)
 is applicable.
@@ -42,4 +42,4 @@ User user = client
 Console.WriteLine("The assignee's timezone is {0}.", user.TimeZone);
 ```
 
-For further information, see the [`Pathoschild.FluentHttpClient` documentation](https://github.com/Pathoschild/Pathoschild.FluentHttpClient).
+For further information, see the [`FluentHttpClient` documentation](https://github.com/Pathoschild/Pathoschild.FluentHttpClient).
