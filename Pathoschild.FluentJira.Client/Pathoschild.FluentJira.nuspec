@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Pathoschild.FluentJira</id>
+    <title>Pathoschild.FluentJira</title>
+    <version>0.0.1-alpha3</version>
+    <authors>Jesse Plamondon-Willard</authors>
+    <description>A strongly-typed, fluent HTTP client for JIRA's REST API using the .NET 4.5 HttpClient.</description>
+    <licenseUrl>https://creativecommons.org/licenses/by/3.0/</licenseUrl>
+    <projectUrl>https://github.com/Pathoschild/Pathoschild.FluentJira#readme</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+</package>
