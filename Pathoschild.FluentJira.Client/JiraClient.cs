@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Net.Http.Headers;
 using System.Text;
-using Pathoschild.DesignByContract;
 using Pathoschild.Http.Client.Default;
 using Pathoschild.Http.Formatters.JsonNet;
 
 namespace Pathoschild.FluentJira.Client
 {
 	/// <summary>Sends HTTP requests and receives responses from a JIRA REST API.</summary>
-	[DesignedByContract]
 	public class JiraClient : FluentClient
 	{
 		/*********
@@ -16,7 +14,7 @@ namespace Pathoschild.FluentJira.Client
 		*********/
 		/// <summary>Construct an instance.</summary>
 		/// <param name="baseUrl">The URL of the JIRA API, including the version (like <c>http://*/rest/api/latest/</c>).</param>
-		public JiraClient([NotNull, NotBlank] string baseUrl)
+		public JiraClient(string baseUrl)
 			: base(baseUrl)
 		{
 			this.Formatters.Clear();
@@ -28,7 +26,7 @@ namespace Pathoschild.FluentJira.Client
 		/// <param name="username">The JIRA username with which to log in.</param>
 		/// <param name="password">The JIRA password with which to log in.</param>
 		/// <remarks>This adds headers for basic authentication. You can provide your own authentication mechanism through the <see cref="JiraClient.BaseClient"/>.</remarks>
-		public JiraClient([NotNull, NotBlank] string baseUrl, [NotNull, NotBlank] string username, [NotNull, NotBlank] string password)
+		public JiraClient(string baseUrl, string username, string password)
 			: this(baseUrl)
 		{
 			this.BaseClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
