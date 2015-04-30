@@ -1,33 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+<DirectedGraph GraphDirection="LeftToRight" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="Pathoschild.FluentJira.Client" Label="Pathoschild.FluentJira.Client" Category="Project" />
-    <Node Id="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Label="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Package" />
-    <Node Id="Microsoft.Net.Http 2.0.20710.0" Label="Microsoft.Net.Http 2.0.20710.0" Category="Package" />
-    <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="Package" />
-    <Node Id="Pathoschild.DesignByContract 0.1.6-alpha2" Label="Pathoschild.DesignByContract 0.1.6-alpha2" Category="Package" />
-    <Node Id="Pathoschild.Http.FluentClient 0.5.0-beta" Label="Pathoschild.Http.FluentClient 0.5.0-beta" Category="Package" />
-    <Node Id="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Label="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Category="Package" />
-    <Node Id="PostSharp 2.1.7.22" Label="PostSharp 2.1.7.22" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.2.3" Category="Package" Bounds="466.88,44,217.896666666667,25.96" Label="Microsoft.AspNet.WebApi.Client 5.2.3" />
+    <Node Id="Newtonsoft.Json 6.0.8" Category="Package" Bounds="714.776666666667,0,135.453333333333,25.96" Label="Newtonsoft.Json 6.0.8" />
+    <Node Id="Pathoschild.FluentJira.Client" Category="Project" Bounds="0,6.03961325396085E-14,166.756666666667,25.96" Label="Pathoschild.FluentJira.Client" />
+    <Node Id="Pathoschild.Http.FluentClient 1.2.0" Category="Package" Bounds="216.373333333333,56,200.89,25.96" Label="Pathoschild.Http.FluentClient 1.2.0" />
+    <Node Id="Pathoschild.Http.Formatters.JsonNet 1.2.0" Category="Package" Bounds="196.756666666667,4.9737991503207E-14,240.123333333333,25.96" Label="Pathoschild.Http.Formatters.JsonNet 1.2.0" />
   </Nodes>
   <Links>
-    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
-    <Link Source="Pathoschild.DesignByContract 0.1.6-alpha2" Target="PostSharp 2.1.7.22" Category="Package Dependency" />
-    <Link Source="Pathoschild.DesignByContract 0.1.6-alpha2" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
-    <Link Source="Pathoschild.Http.FluentClient 0.5.0-beta" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
-    <Link Source="Pathoschild.Http.FluentClient 0.5.0-beta" Target="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Package Dependency" />
-    <Link Source="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
-    <Link Source="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Target="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Package Dependency" />
-    <Link Source="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
-    <Link Source="Pathoschild.FluentJira.Client" Target="Pathoschild.DesignByContract 0.1.6-alpha2" Category="Installed Package" />
-    <Link Source="Pathoschild.FluentJira.Client" Target="Pathoschild.Http.FluentClient 0.5.0-beta" Category="Installed Package" />
-    <Link Source="Pathoschild.FluentJira.Client" Target="Pathoschild.Http.Formatters.JsonNet 0.5.0-beta" Category="Installed Package" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.3" Target="Newtonsoft.Json 6.0.8" Category="Package Dependency" Bounds="636.797485351563,27.8340530395508,75.9340209960938,16.1659469604492" />
+    <Link Source="Pathoschild.FluentJira.Client" Target="Pathoschild.Http.FluentClient 1.2.0" Category="Installed Package" Bounds="137.486389160156,25.9599990844727,116.472183227539,27.9405517578125" />
+    <Link Source="Pathoschild.FluentJira.Client" Target="Pathoschild.Http.Formatters.JsonNet 1.2.0" Category="Installed Package" Bounds="166.75666809082,12.9799995422363,21,0" />
+    <Link Source="Pathoschild.Http.FluentClient 1.2.0" Target="Microsoft.AspNet.WebApi.Client 5.2.3" Category="Package Dependency" Bounds="417.263336181641,62.4441299438477,40.6263122558594,1.88222503662109" />
+    <Link Source="Pathoschild.Http.Formatters.JsonNet 1.2.0" Target="Microsoft.AspNet.WebApi.Client 5.2.3" Category="Package Dependency" Bounds="393.226287841797,25.9599990844727,97.3212280273438,16.5326957702637" />
+    <Link Source="Pathoschild.Http.Formatters.JsonNet 1.2.0" Target="Newtonsoft.Json 6.0.8" Category="Package Dependency" Bounds="436.880004882813,12.9799995422363,268.896667480469,0" />
   </Links>
   <Categories>
-    <Category Id="Project" />
+    <Category Id="Installed Package" />
     <Category Id="Package" />
+    <Category Id="Package Dependency" />
+    <Category Id="Project" />
   </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
   <Styles>
     <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
       <Condition Expression="HasCategory('Project')" />
