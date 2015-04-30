@@ -38,6 +38,8 @@
     <Compile Include="Models\Abstract\IIdentifiableEntity.cs" />
     <Compile Include="Models\Abstract\INamedEntity.cs" />
     <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\Change.cs" />
+    <Compile Include="Models\ChangeDetail.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\CommentList.cs" />
     <Compile Include="Models\Component.cs" />
@@ -47,10 +49,12 @@
     <Compile Include="Models\Internal\AddressableEntity.cs" />
     <Compile Include="Models\Internal\AddressableIdentifiableEntity.cs" />
     <Compile Include="Models\Internal\AddressableIdentifiableNamedEntity.cs" />
+    <Compile Include="Models\Internal\IdentifiableEntity.cs" />
     <Compile Include="Models\Issue.cs" />
     <Compile Include="Models\IssueFields.cs" />
     <Compile Include="Models\IssueLink.cs" />
     <Compile Include="Models\IssueLinkType.cs" />
+    <Compile Include="Models\ChangeList.cs" />
     <Compile Include="Models\IssueList.cs" />
     <Compile Include="Models\IssueTimeTracking.cs" />
     <Compile Include="Models\IssueType.cs" />

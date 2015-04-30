@@ -10,5 +10,8 @@ namespace Pathoschild.FluentJira.Models
 
 		/// <summary>The additional issue fields.</summary>
 		public IssueFields Fields { get; set; }
+
+        /// <summary>The change history for this ticket's fields.</summary>
+        public ChangeList ChangeLog { get; set; }
 	}
 }
