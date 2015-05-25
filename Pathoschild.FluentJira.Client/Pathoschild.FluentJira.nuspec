@@ -2,10 +2,10 @@
 <package>
   <metadata>
     <id>Pathoschild.FluentJira</id>
-    <title>Pathoschild.FluentJira</title>
-    <version>0.0.1-alpha3</version>
+    <title>Fluent JIRA client</title>
+    <version>0.0.1-alpha</version>
     <authors>Jesse Plamondon-Willard</authors>
-    <description>A strongly-typed, fluent HTTP client for JIRA's REST API using the .NET 4.5 HttpClient.</description>
+    <description>A tiny framework for using JIRA's REST API from C#. It handles authentication and maps REST responses to strongly-typed models, but you're still responsible for building the API call (which lets you query anything from the REST API, including addon APIs).</description>
     <licenseUrl>https://creativecommons.org/licenses/by/3.0/</licenseUrl>
     <projectUrl>https://github.com/Pathoschild/Pathoschild.FluentJira#readme</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
