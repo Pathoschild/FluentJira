@@ -7,8 +7,8 @@ query custom addon APIs that aren't added to the client library (by passing in c
 **This is an early development version.**
 
 ## Usage
-This client is an extension of [`FluentHttpClient`](https://github.com/Pathoschild/Pathoschild.FluentHttpClient),
-so you can execute any HTTP request against the API and get a strongly-typed response. The
+This client is an extension of [`FluentHttpClient`](https://github.com/Pathoschild/FluentHttpClient)
+which simplifies HTTP requests against the JIRA API and parsing the server responses. The
 structures returned by the client look like the actual API responses, so the [JIRA API documentation](http://docs.atlassian.com/jira/REST/latest/)
 is applicable.
 
@@ -21,7 +21,7 @@ IClient client = new JiraClient("https://example.atlassian.net/rest/api/latest/"
 Issue issue = await client
     .Get("issue/EXAMPLE-14")
     .As<Issue>();
-Console.WriteLine("'{0}' has a remaining estimate of {1}.", issue.Fields.Summary, issue.Fields.TimeTracking.RemainingEstimate);
+Console.WriteLine($"'{issue.Fields.Summary}' has a remaining estimate of {issue.Fields.TimeTracking.RemainingEstimate}.");
 
 // fetch the issue's change history
 Issue issue = await client
@@ -29,7 +29,7 @@ Issue issue = await client
     .WithArgument("expand", "changelog")
     .As<Issue>();
 Change change = issue.ChangeLog.Histories.Last();
-Console.WriteLine("The issue was last edited by {0} at {1}.", change.Author.Name, change.Created);
+Console.WriteLine($"The issue was last edited by {change.Author.Name} at {change.Created}.");
 ```
 
 ### Self links
@@ -39,7 +39,7 @@ example, this code gets all the information for the user who posted an issue:
 User user = client
     .Get(issue.Fields.Assignee.Self)
     .RetrieveAs<User>();
-Console.WriteLine("The assignee's timezone is {0}.", user.TimeZone);
+Console.WriteLine("The assignee's timezone is {user.TimeZone}.");
 ```
 
-For further information, see the [`FluentHttpClient` documentation](https://github.com/Pathoschild/Pathoschild.FluentHttpClient).
+For further information, see the [`FluentHttpClient` documentation](https://github.com/Pathoschild/FluentHttpClient).
