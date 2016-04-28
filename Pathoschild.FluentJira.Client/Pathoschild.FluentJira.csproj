@@ -73,20 +73,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Pathoschild.Http.Client, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Pathoschild.Http.FluentClient.1.2.0\lib\net45\Pathoschild.Http.Client.dll</HintPath>
+    <Reference Include="Pathoschild.Http.Client, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pathoschild.Http.FluentClient.2.0.0\lib\net45\Pathoschild.Http.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Pathoschild.Http.Formatters, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Pathoschild.Http.Formatters.JsonNet.1.2.0\lib\net45\Pathoschild.Http.Formatters.dll</HintPath>
+    <Reference Include="Pathoschild.Http.Formatters, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pathoschild.Http.Formatters.JsonNet.2.0.0\lib\net45\Pathoschild.Http.Formatters.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Pathoschild.Http.Formatters.JsonNet, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Pathoschild.Http.Formatters.JsonNet.1.2.0\lib\net45\Pathoschild.Http.Formatters.JsonNet.dll</HintPath>
+    <Reference Include="Pathoschild.Http.Formatters.JsonNet, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pathoschild.Http.Formatters.JsonNet.2.0.0\lib\net45\Pathoschild.Http.Formatters.JsonNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -98,9 +98,8 @@
     <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Pathoschild.FluentJira.nuspec" />
+    <None Include="package.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http.Headers;
 using System.Text;
-using Pathoschild.Http.Client.Default;
+using Pathoschild.Http.Client;
 using Pathoschild.Http.Formatters.JsonNet;
 
 namespace Pathoschild.FluentJira
