@@ -3,12 +3,12 @@
   <metadata>
     <id>Pathoschild.FluentJira</id>
     <title>Fluent JIRA client</title>
-    <version>0.0.2-alpha</version>
+    <version>0.0.3-alpha</version>
     <authors>Jesse Plamondon-Willard</authors>
-    <description>A tiny framework for using JIRA's REST API from C#. It handles authentication and maps REST responses to strongly-typed models, but you're still responsible for building the API call (which lets you query anything from the REST API, including addon APIs).</description>
+    <description>A tiny HTTP client for JIRA's REST API. It provides a fluent interface for building API queries, and handles authentication and deserialisation into strongly-typed models.</description>
     <licenseUrl>https://creativecommons.org/licenses/by/3.0/</licenseUrl>
     <projectUrl>https://github.com/Pathoschild/Pathoschild.FluentJira#readme</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Updated HTTP client package.</releaseNotes>
+    <releaseNotes>Migrated to PCL for cross-platform support.</releaseNotes>
   </metadata>
 </package>

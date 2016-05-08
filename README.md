@@ -1,45 +1,53 @@
-**FluentJira** is a tiny framework for using [JIRA](http://www.atlassian.com/software/jira/overview)'s
-[REST API](http://docs.atlassian.com/jira/REST/latest/) from C#. It handles authentication and maps
-REST responses to strongly-typed models, but you're still responsible for building the API call.
-This is by design — you're not constrained to the operations abstracted by the client, and you can
-query custom addon APIs that aren't added to the client library (by passing in custom models).
+**FluentJira** is a tiny framework for using [JIRA][]'s [REST API][JIRA REST API] from .NET. It provides a fluent interface for building API queries, and handles authentication and deserialisation into strongly-typed models.
+
+This framework doesn't encapsulate the specific endpoint signatures, which means you can easily query any portion of the JIRA REST API (including addon APIs) without needing to change the HTTP client.
 
 **This is an early development version.**
 
-## Usage
-This client is an extension of [`FluentHttpClient`](https://github.com/Pathoschild/FluentHttpClient)
-which simplifies HTTP requests against the JIRA API and parsing the server responses. The
-structures returned by the client look like the actual API responses, so the [JIRA API documentation](http://docs.atlassian.com/jira/REST/latest/)
-is applicable.
+## Installing
+The fluent client is [available on NuGet][]:
+> Install-Package Pathoschild.FluentJira
 
-### Example
+This is a portable library compatible with multiple platforms (.NET 4.5+, Windows 8+ apps, Universal Windows Platform, and ASP.NET Core 1.0).
+
+## Using the client
+ which simplifies HTTP requests against the JIRA API and parsing the server responses. The structures returned by the client look like the actual API responses, so the [JIRA API documentation](http://docs.atlassian.com/jira/REST/latest/) is applicable.
+
+You start by creating a client:
+
 ```c#
 // create client
 IClient client = new JiraClient("https://example.atlassian.net/rest/api/latest/", "username", "password");
+```
 
-// fetch the default issue fields
-Issue issue = await client
-    .Get("issue/EXAMPLE-14")
-    .As<Issue>();
-Console.WriteLine($"'{issue.Fields.Summary}' has a remaining estimate of {issue.Fields.TimeTracking.RemainingEstimate}.");
+Next you chain methods to define your API request, and deserialise the response into one of the predefined models (or your own model):
 
-// fetch the issue's change history
+```c#
+// fetch an issue
 Issue issue = await client
     .Get("issue/EXAMPLE-14")
     .WithArgument("expand", "changelog")
     .As<Issue>();
-Change change = issue.ChangeLog.Histories.Last();
-Console.WriteLine($"The issue was last edited by {change.Author.Name} at {change.Created}.");
+
+// read the model
+Console.WriteLine($@"
+	'{issue.Fields.Summary}' has a remaining estimate of {issue.Fields.TimeTracking.RemainingEstimate}.
+	It was last edited by {issue.ChangeLog.Histories.Last().Author.Name}.
+");
 ```
 
 ### Self links
-The client recognizes JIRA's `Self` URLs that link to further information on an object. For
-example, this code gets all the information for the user who posted an issue:
+You can use JIRA's `Self` URLs to get further information on an object. For example, this code gets all the information for the user who posted an issue:
 ```c#
 User user = client
     .Get(issue.Fields.Assignee.Self)
-    .RetrieveAs<User>();
-Console.WriteLine("The assignee's timezone is {user.TimeZone}.");
+    .As<User>();
+Console.WriteLine($"The assignee's timezone is {user.TimeZone}.");
 ```
 
-For further information, see the [`FluentHttpClient` documentation](https://github.com/Pathoschild/FluentHttpClient).
+This is a minimal extension of the [fluent HTTP client][FluentHttpClient]; see [its project page for more examples and documentation][FluentHttpClient].
+
+[available on NuGet]: https://www.nuget.org/packages/Pathoschild.FluentJira
+[JIRA]: http://www.atlassian.com/software/jira/overview
+[JIRA REST API]: http://www.atlassian.com/software/jira/overview
+[FluentHttpClient]: https://github.com/Pathoschild/FluentHttpClient

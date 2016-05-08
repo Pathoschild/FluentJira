@@ -2,7 +2,6 @@
 using System.Net.Http.Headers;
 using System.Text;
 using Pathoschild.Http.Client;
-using Pathoschild.Http.Formatters.JsonNet;
 
 namespace Pathoschild.FluentJira
 {
@@ -15,11 +14,7 @@ namespace Pathoschild.FluentJira
         /// <summary>Construct an instance.</summary>
         /// <param name="baseUrl">The URL of the JIRA API, including the version (like <c>http://*/rest/api/latest/</c>).</param>
         public JiraClient(string baseUrl)
-            : base(baseUrl)
-        {
-            this.Formatters.Clear();
-            this.Formatters.Add(new JsonNetFormatter());
-        }
+            : base(baseUrl) { }
 
         /// <summary>Construct an instance.</summary>
         /// <param name="baseUrl">The URL of the JIRA API, including the version (like <c>http://*/rest/api/latest/</c>).</param>
